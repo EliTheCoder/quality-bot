@@ -1,0 +1,10 @@
+{
+  "name": "Quality",
+  "version": "1.0.0",
+  "description": "SWEEPING TIME",
+  "main": "bot.js",
+  "author": "Alex Prikockis",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
