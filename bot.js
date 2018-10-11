@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
 
-bot.login('NDM3MjU2MDcwNjUwNjU4ODIz.DlzDiA.DqRguaHGN6cjcu_oiX2RypGgirs');
+bot.login('INSERT_TOKEN');
 
 console.log("Started life anew");
 
