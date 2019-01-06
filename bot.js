@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
 
-let token = JSON.parse(fs.readFileSync('token.json')).token;
+let token = JSON.parse(fs.readFileSync('/home/pibot/Coding/quality-bot/token.json')).token;
 bot.login(token);
 console.log("Started life anew");
 
