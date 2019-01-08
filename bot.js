@@ -1,3 +1,6 @@
+// Quality Bot Version 2.0.0
+// Alex Prikockis, 2018
+
 // Calling package
 const Discord = require('discord.js');
 const bot = new Discord.Client();
@@ -25,8 +28,15 @@ bot.on('message', message => {
 	let origin = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + '  ' + message.guild.name.trim().substring(0,10) + ' / ' + sender.username.trim().substring(0,10) + ' / ' + message.channel.name.substring(0,10) + '  ' + msg + ':  '
 
 
+	// dev notice
+	if (msg.contains("<@123456789>"))
+		console.log(`${currentdate}  ${sender.username}  NOTICE:  ${message.content}`);
+
+
+
 
 	// delete marked messages
+
 	if (msg.startsWith(prefix + 'OOC')) {
 
 		async function purge() { // wrapped in async since await only works in it
