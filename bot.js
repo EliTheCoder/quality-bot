@@ -29,9 +29,10 @@ bot.on('message', message => {
 
 
 	// dev notice
-	if (msg.contains("<@123456789>"))
+	if (msg.includes("<@123456789>"))
 		console.log(`${currentdate}  ${sender.username}  NOTICE:  ${message.content}`);
-
+	// just realized I'll probably never update the version number
+	// like the asshole that I am
 
 
 
