@@ -15,6 +15,7 @@ console.log("Started life anew");
 // Config
 
 const prefix = '>';
+const userID = '<@437256070650658823>';
 
 // Listener Event: Received message
 bot.on('message', message => {
@@ -29,8 +30,8 @@ bot.on('message', message => {
 
 
 	// dev notice
-	if (msg.includes("<@437256070650658823>"))
-		console.log(`${currentdate}  ${sender.username}  NOTICE:  ${message.content}`);
+	if (msg.includes(userID))
+		console.log(`${currentdate}  ${sender.username}  ${message.guild.name} | ${message.channel.name}  NOTICE:  ${message.content}`);
 	// just realized I'll probably never update the version number
 	// like the asshole that I am
 
