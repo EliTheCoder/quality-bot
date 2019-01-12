@@ -35,6 +35,19 @@ bot.on('message', message => {
 	// just realized I'll probably never update the version number
 	// like the asshole that I am
 
+	if (msg.startsWith(prefix + 'ROLE')) {
+		message.delete();
+		try {
+			let role = message.guild.roles.find(role => role.name === args[0]);
+			let memb = (args[1] != undefined)
+				? message.guild.members.find(user => user.user.username === args[1])
+				: message.guild.members.find(user => user.user.username === sender.username);
+			memb.addRole(role);
+		}
+		catch(err) {
+			console.log(`HOLY FUCKING HELL WE GOT A ROLE ERROR:  ${err.message}`)
+		}
+	}
 
 
 	// delete marked messages
