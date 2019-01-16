@@ -65,7 +65,7 @@ bot.on('message', message => {
 		await message.delete(); // delete command message
 
 		if /*(!message.member.roles.some(r=>["GM", "Game Master", "Admin", "Bot Dev", "Mod", "Moderator", "Owner", "gEEK"].includes(r.name)))*/
-		!(message.member.hasPermission(`MANAGE_MESSAGES`)  && (sender.username == `AlexCheese`)) {
+		(!message.member.hasPermission(`MANAGE_MESSAGES`) {
 			message.reply('You do not have permission to manage messages.')
 				.then(msg => {
 					msg.delete(5000);
