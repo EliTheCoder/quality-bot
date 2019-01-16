@@ -5,8 +5,16 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
-
-let token = JSON.parse(fs.readFileSync('/home/pibot/Coding/quality-bot/token.json')).token;
+let token;
+try {
+	token = JSON.parse(fs.readFileSync('/home/pibot/Coding/quality-bot/token.json')).token;
+}
+catch(err) {
+	console.log(`WARNING: ${err.message}`);
+	console.log('Checking for local token file');
+	token = JSON.parse(fs.readFileSync('token.json')).token;
+}
+console.log(`Logging in with token: ${token}`);
 bot.login(token);
 console.log("Started life anew");
 
