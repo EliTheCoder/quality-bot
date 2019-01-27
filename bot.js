@@ -99,6 +99,11 @@ rl.on('line', async input => {
 
 	switch (args[0]) {
 		case 'read':
+			let msgHistory = await bot.channels.find(ch => ch.id == args[1]).fetchMessages({limit:args[2]});
+			console.log('success ig... ' + msgHistory.size + ' messages');
+			msgHistory.forEach(msg => {
+   			console.log(`${msg.author.username}: ${msg.content}`);
+			});
 			break;
 
 	}
