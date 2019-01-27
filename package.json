@@ -5,6 +5,7 @@
   "main": "bot.js",
   "author": "Alex Prikockis",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "eliapi": "0.0.3"
   }
 }

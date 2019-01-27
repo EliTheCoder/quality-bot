@@ -3,3 +3,4 @@ node_modules/
 console_log.txt
 *.swp
 *.save
+*.log

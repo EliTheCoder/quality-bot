@@ -1,10 +1,15 @@
 // Quality Bot Version 3.0.0
 // Alex Prikockis, 2019
 
-// Calling package
+// Calling packages
+const rl = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
+const eliapi = require('eliapi');
 let token;
 try {
 	token = JSON.parse(fs.readFileSync('/home/pibot/Coding/quality-bot/token.json')).token;
@@ -84,4 +89,17 @@ bot.on('ready', () => {
   console.log("Bot launch complete");
 
 
+});
+
+
+// Console input
+
+rl.on('line', async input => {
+	let args = input.split(" ");
+
+	switch (args[0]) {
+		case 'read':
+			break;
+
+	}
 });
