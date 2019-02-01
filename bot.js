@@ -107,6 +107,7 @@ rl.on('line', async input => {
 			break;
 		case 'info':
 			console.log(`${bot.guilds.size} servers`);
+			break;
 
 	}
 });
