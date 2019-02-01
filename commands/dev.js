@@ -10,7 +10,6 @@ module.exports.run = async (bot, message, args, origin) => {  // Runs when comma
 				console.log(message.guild[args[1]]);
 			break;
 		case 'botinfo':
-			message.delete();
 			message.channel.send(`
 				Bot is in ${bot.guilds.size} servers
 				Current server is '${message.guild.name}', id '${message.guild.id}'
