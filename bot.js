@@ -105,6 +105,8 @@ rl.on('line', async input => {
    			console.log(`${msg.author.username}: ${msg.content}`);
 			});
 			break;
+		case 'info':
+			console.log(`${bot.guilds.size} servers`);
 
 	}
 });
