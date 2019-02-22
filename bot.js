@@ -39,6 +39,7 @@ fs.readdir('./commands/', (err, files) => {
 		let cmds = require(`./commands/${f}`);
 		console.log(`Command ${f} loaded.`);
 		bot.commands.set(cmds.config.name, cmds);
+		try {cmds.init(bot)} catch {}
 	})
 });
 
