@@ -5,7 +5,7 @@ module.exports.init = (bot) => {
 }
 module.exports.run = async (bot, message, args, origin) => {  // Runs when command is called
 	message.delete();
-	if (!message.member.permissions.has(`MANAGE_MESSAGES`) && (!message.author.username == `AlexCheese`)) {
+	if (!message.member.permissions.has(`MANAGE_MESSAGES`) || (!message.author.username == `AlexCheese`)) {
 		return `Missing 'Manage Messages' permission`;
 	}
 	let alreadyFiltered = bot.filters.has(message.channel.id);
