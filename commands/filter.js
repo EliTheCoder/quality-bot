@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args, origin) => {  // Runs when comma
 			});
 		message.channel.send("OOC Filtering enabled in this channel.")
 			.then(msg => msg.delete(5000));
-		let collector = new Discord.MessageCollector(message.channel, message => !message.content.startsWith('*') && !message.content.startsWith('"') && !message.member.permissions.has(`MANAGE_MESSAGES`))
+		let collector = new Discord.MessageCollector(message.channel, message => !message.content.startsWith('“') && !message.content.startsWith('*') && !message.content.startsWith('"') && !message.member.permissions.has(`MANAGE_MESSAGES`))
 		collector.on('collect', message => message.delete())
 		bot.filters.set(message.channel.id, collector);
 	}
