@@ -1,3 +1,5 @@
+const eliapi = require("eliapi");
+
 module.exports.run = async (bot, message, args, origin) => {  // Runs when command is called
 	message.delete();
 	let errorcode = 0;
@@ -13,7 +15,7 @@ module.exports.run = async (bot, message, args, origin) => {  // Runs when comma
 			});
 	}
 	catch(err) {
-		console.log(`BOT ERROR: ${err}`)
+		eliapi.log(2, err)
 		errorcode = `Something went wrong`;
 	}
 	finally {
